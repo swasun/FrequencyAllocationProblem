@@ -1,0 +1,10 @@
+c /usr/bin/toulbar2  version : 0.9.8-master-0d0a07d-tainted (1461834798), copyright (c) INRA 2015
+loading wcsp file: instances/wcsp/FrequencyAllocationWCSP_celar_50_7_10_5_0.800000_9.wcsp
+Read 50 variables, with 65 values at most, and 62 cost functions, with maximum arity 2.
+Cost function decomposition time : 0 seconds.
+Preprocessing time: 0.04 seconds.
+0 unassigned variables, 0 values in all current domains (med. size:0, max size:65) and 0 non-unary cost functions (med. degree:0)
+Initial lower and upper bounds: [1,2[ 50%
+New solution: 1 (0 backtracks, 0 nodes, depth 1)
+Optimum: 1 in 0 backtracks and 0 nodes ( 13 removals by DEE) and 0.04 seconds.
+end.

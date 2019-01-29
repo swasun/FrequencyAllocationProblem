@@ -1,0 +1,55 @@
+c [-tl=1800000, -p=4, instances/xcsp3/FrequencyAllocationXCSP3-m1-celar_500_30_20_5_0.870000_48.xml]
+c 4 solvers in parallel
+c parse instance...
+c solve instance...
+s UNSATISFIABLE
+rent.ExecutionException: java.lang.OutOfMemoryError
+	at java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:1006)
+	at org.chocosolver.solver.ParallelPortfolio.solve(ParallelPortfolio.java:201)
+	at org.chocosolver.parser.xcsp.XCSP.manyThread(XCSP.java:164)
+	at org.chocosolver.parser.xcsp.XCSP.solve(XCSP.java:134)
+	at org.chocosolver.parser.xcsp.ChocoXCSP.main(ChocoXCSP.java:25)
+Caused by: java.lang.OutOfMemoryError
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.util.concurrent.ForkJoinTask.getThrowableException(ForkJoinTask.java:598)
+	at java.util.concurrent.ForkJoinTask.get(ForkJoinTask.java:1005)
+	... 4 more
+Caused by: java.lang.OutOfMemoryError: Java heap space
+	at org.chocosolver.memory.trailing.trail.flatten.StoredLongTrail.resizeUpdateCapacity(StoredLongTrail.java:177)
+	at org.chocosolver.memory.trailing.trail.flatten.StoredLongTrail.buildFakeHistory(StoredLongTrail.java:154)
+	at org.chocosolver.memory.trailing.StoredLong.<init>(StoredLong.java:31)
+	at org.chocosolver.memory.trailing.EnvironmentTrailing.makeLong(EnvironmentTrailing.java:175)
+	at org.chocosolver.memory.structure.S64BitSet.ensureCapacity(S64BitSet.java:136)
+	at org.chocosolver.memory.structure.S64BitSet.expandTo(S64BitSet.java:167)
+	at org.chocosolver.memory.structure.S64BitSet.set(S64BitSet.java:199)
+	at org.chocosolver.memory.structure.S64BitSet.set(S64BitSet.java:216)
+	at org.chocosolver.util.objects.setDataStructures.bitset.Set_Std_BitSet.add(Set_Std_BitSet.java:62)
+	at org.chocosolver.solver.constraints.nary.nValue.amnv.rules.R3.enforceEq(R3.java:115)
+	at org.chocosolver.solver.constraints.nary.nValue.amnv.rules.R3.filter(R3.java:95)
+	at org.chocosolver.solver.constraints.nary.nValue.PropAMNV.propagate(PropAMNV.java:75)
+	at org.chocosolver.solver.propagation.hardcoded.SevenQueuesPropagatorEngine.propagate(SevenQueuesPropagatorEngine.java:208)
+	at org.chocosolver.solver.search.loop.propagate.PropagateBasic.execute(PropagateBasic.java:47)
+	at org.chocosolver.solver.Solver.propagate(Solver.java:411)
+	at org.chocosolver.solver.Solver.searchLoop(Solver.java:294)
+	at org.chocosolver.solver.Solver.solve(Solver.java:264)
+	at org.chocosolver.solver.ParallelPortfolio.lambda$null$47(ParallelPortfolio.java:195)
+	at org.chocosolver.solver.ParallelPortfolio$$Lambda$102/24615387.accept(Unknown Source)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.ForEachOps$ForEachTask.compute(ForEachOps.java:291)
+	at java.util.concurrent.CountedCompleter.exec(CountedCompleter.java:731)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinTask.doInvoke(ForkJoinTask.java:401)
+	at java.util.concurrent.ForkJoinTask.invoke(ForkJoinTask.java:734)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateParallel(ForEachOps.java:160)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateParallel(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:233)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:583)
+real 102.07
+user 415.68
+sys 2.68

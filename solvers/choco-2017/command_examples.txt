@@ -1,0 +1,3 @@
+java -server -Xmx500m -cp choco-parsers.jar org.chocosolver.parser.xcsp.ChocoXCSP FrequencyAllocationXCSP3-celar_50_7_10_5_0.800000_0.xml
+java -server -Xmx500m -cp choco-parsers.jar org.chocosolver.parser.xcsp.ChocoXCSP FrequencyAllocationXCSP3-m1-celar_50_7_10_5_0.800000_0.xml
+java -server -Xmx500m -cp choco-parsers.jar org.chocosolver.parser.xcsp.ChocoXCSP FrequencyAllocationXCSP3-m3-celar_50_7_10_5_0.800000_0.xml

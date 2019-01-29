@@ -1,0 +1,14 @@
+c /usr/bin/toulbar2  version : 0.9.8-master-0d0a07d-tainted (1461834798), copyright (c) INRA 2015
+loading wcsp file: instances/wcsp/FrequencyAllocationWCSP_celar_150_13_15_5_0.800000_25.wcsp
+Read 150 variables, with 67 values at most, and 265 cost functions, with maximum arity 2.
+Cost function decomposition time : 0 seconds.
+Preprocessing time: 0.26 seconds.
+68 unassigned variables, 3654 values in all current domains (med. size:53, max size:67) and 139 non-unary cost functions (med. degree:4)
+Initial lower and upper bounds: [0,169[ 100%
+c 2097152 Bytes allocated for x stack.
+c 4194304 Bytes allocated for x stack.
+New solution: 1 (0 backtracks, 48 nodes, depth 49)
+Optimality gap: [ 1 , 1 ] 0 % (362 backtracks, 983 nodes)
+Node redundancy during HBFS: 23.3978 %
+Optimum: 1 in 362 backtracks and 983 nodes ( 37 removals by DEE) and 0.45 seconds.
+end.
